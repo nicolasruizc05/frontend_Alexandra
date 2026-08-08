@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onchange</title>
+</head>
+<body>
+    <h2>Programa de formación</h2>
+    <label for="programa">Seleccione un programa</label>
+    <select id="programa" onchange="mostrarPrograma()">
+        <option value="">-- Seleccione --</option>
+        <option value="Analisis y Desarrollo de Software">Análisis y Desarrollo de Software</option>
+        <option value="Programacion de Software">Programacion de Software</option>
+        <option value="Desarrollo de videojuegos">Desarrollo de videojuegos</option>
+        <option value="Diseño Grafico">Diseño Gráfico</option>
+        <option value="Redes y Telecomunicaciones">Redes y Telecomunicaciones</option>
+    </select>
+    <h3 id="resultado"></h3>
+    <script src="index.js"></script>
+</body>
+</html>

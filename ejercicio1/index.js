@@ -1,0 +1,1 @@
+console.log("Prueba de html manejo del DOM")

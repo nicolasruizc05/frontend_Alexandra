@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onsubmit</title>
+</head>
+<body>
+    <!-- # Se utiliza para enviar los formularios y ejecutar una función cuando se envía el formulario. El evento onsubmit se activa cuando el usuario hace clic en el botón de envío del formulario o presiona la tecla Enter mientras está enfocado en un campo de entrada dentro del formulario. -->
+    <h2>Evento onsubmit</h2>
+    <form onsubmit="capturarDatos(event)">
+        <label for="correo">Correo electrónico:</label><br>
+        <input type="email" id="correo" > <br>
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea  id="mensaje"></textarea> <br> <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <h3>Información Guardada</h3>
+    <p id="resultado"></p>
+    <script src="index.js"></script>
+</body>
+</html>
