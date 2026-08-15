@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1</title>
+</head>
+<body>
+    <p>Ejercicio 1. Países del mundo  
+Desarrolle una aplicación que permita registrar información de varios países. Por cada país solicitar: 
+Nombre del país  
+Capital  
+Continente  
+Idioma  
+URL de la bandera  
+Cada país debe almacenarse como un objeto y todos los países deben quedar dentro de un arreglo. 
+El arreglo debe guardarse en localStorage. 
+Al presionar el botón Ver países, recuperar el arreglo almacenado y mostrar cada país mediante una tarjeta que incluya su bandera. </p>
+
+<label for="pais">Ingrese el nombre del país</label>
+<input type="text" id="pais"> <br><br>
+<label for="Capital">Ingrese la capital perteneciente del país</label>
+<input type="text"  id="capital"> <br><br>
+<label for="Continente">Ingrese el Continente al cual pertenece el país</label>
+<input type="text" id="continente"> <br><br>
+<label for="idioma">Ingrese el idioma del país</label>
+<input type="text" id="idioma"> <br><br>
+<label for="bandera">Ingrese un URL de la bandera del país correspondiente</label>
+<input type="url" id="bandera"> <br><br>
+<button onclick="guardarInfo()">Guardar</button>
+<button onclick="verInfo()">Ver Info </button>
+<div id="contenedor">
+
+</div>
+<script src="index.js"></script>
+</body>
+</html>

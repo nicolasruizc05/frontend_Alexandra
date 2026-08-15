@@ -118,6 +118,8 @@ let agregar = () => {
 
 let agregarInner = () => {
     let tabla = document.getElementById("contenedor")
+    tabla.style.border="1px solid green"
     tabla.innerHTML ="<table><tr><td>1</td><td>2</td><td>3</td><td>4</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></table>"
-    
+    tabla.style.borderCollapse="collapse"
+    tabla.tr.style.border="1px solid green"
 }

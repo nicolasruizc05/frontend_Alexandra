@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <p>Ejercicio 3. Catálogo de animales  
+Desarrolle una aplicación para registrar diferentes animales. 
+Solicitar: 
+
+Nombre  
+Especie  
+Edad  
+Hábitat  
+URL de una imagen  
+Por ejemplo: 
+
+Nombre: Luna 
+Especie: Perro 
+Edad: 3 
+Hábitat: Doméstico 
+Imagen: URL 
+Cada animal debe almacenarse como un objeto dentro de un arreglo de animales. 
+El arreglo completo debe guardarse en localStorage. 
+Al presionar Mostrar animales, recuperar los datos almacenados y presentar cada animal mediante una tarjeta con imagen. </p>
+
+<label for="nombre">Ingrese el nombre del animal:</label>
+<input type="text" id="nombre" name="nombre"><br><br>
+<label for="especie">Ingrese la especie del animal:</label>
+<input type="text" id="especie" name="especie"><br><br>
+<label for="edad">Ingrese la edad del animal:</label>
+<input type="number" id="edad" name="edad"><br><br>
+<label for="habitat">Ingrese el hábitat del animal:</label>
+<input type="text" id="habitat" name="habitat"><br><br>
+<label for="imagen">Ingrese la URL de la imagen del animal:</label>
+<input type="url" id="foto" name="imagen"><br><br>
+<button onclick="guardarAnimal()">Guardar animal</button>
+<button onclick="mostrarAnimales()">Mostrar animales</button>
+<div id="contenedor"></div>
+<script src="index.js"></script>
+</body>
+</html>
