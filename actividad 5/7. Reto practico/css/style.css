@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+/* ---------- Header ---------- */
+.header {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border-bottom: 2px solid #334155;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #38bdf8;
+}
+
+.subtitulo {
+  margin-top: 0.5rem;
+  color: #94a3b8;
+}
+
+/* ---------- Contenedor general ---------- */
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.categoria {
+  margin-bottom: 3rem;
+}
+
+.titulo-categoria {
+  font-size: 1.4rem;
+  color: #f8fafc;
+  border-left: 4px solid #38bdf8;
+  padding-left: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ---------- Grid de juegos ---------- */
+.lista-juegos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.juego {
+  position: relative;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.juego:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+}
+
+.juego-titulo {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #f1f5f9;
+}
+
+.juego-info {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 0.4rem;
+}
+
+.juego-precio {
+  font-weight: bold;
+  color: #4ade80;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Variantes de tarjeta ---------- */
+.juego.destacado {
+  border-color: #facc15;
+}
+
+.juego.oferta {
+  border-color: #f87171;
+}
+
+/* ---------- Etiquetas ---------- */
+.etiqueta {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.etiqueta-nuevo {
+  background-color: #facc15;
+  color: #1e293b;
+}
+
+.etiqueta-oferta {
+  background-color: #f87171;
+  color: #1e293b;
+}
+
+/* ---------- Botón ---------- */
+.btn {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #0ea5e9;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #94a3b8;
+  border-top: 2px solid #334155;
+}
+
+#contador-juegos {
+  color: #38bdf8;
+  font-weight: bold;
+}

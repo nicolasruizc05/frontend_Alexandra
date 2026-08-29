@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Videojuegos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1 id="titulo-principal">🎮 Catálogo de Videojuegos</h1>
+    <p class="subtitulo">Explora nuestra colección organizada por categorías</p>
+  </header>
+
+  <main class="contenedor">
+
+    <section class="categoria" id="categoria-accion">
+      <h2 class="titulo-categoria">Acción</h2>
+      <div class="lista-juegos">
+
+        <article class="juego destacado" data-genero="accion">
+          <span class="etiqueta etiqueta-nuevo">Nuevo</span>
+          <h3 class="juego-titulo">Elden Ring</h3>
+          <p class="juego-info">Plataforma: PC / PS5</p>
+          <p class="juego-precio">$120.000</p>
+          <button class="btn btn-agregar">Agregar al carrito</button>
+        </article>
+
+        <article class="juego" data-genero="accion">
+          <h3 class="juego-titulo">God of War Ragnarök</h3>
+          <p class="juego-info">Plataforma: PS5</p>
+          <p class="juego-precio">$140.000</p>
+          <button class="btn btn-agregar">Agregar al carrito</button>
+        </article>
+
+        <article class="juego oferta" data-genero="accion">
+          <span class="etiqueta etiqueta-oferta">Oferta</span>
+          <h3 class="juego-titulo">DOOM Eternal</h3>
+          <p class="juego-info">Plataforma: PC / Xbox</p>
+          <p class="juego-precio">$60.000</p>
+          <button class="btn btn-agregar">Agregar al carrito</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="categoria" id="categoria-aventura">
+      <h2 class="titulo-categoria">Aventura</h2>
+      <div class="lista-juegos">
+
+        <article class="juego" data-genero="aventura">
+          <h3 class="juego-titulo">The Legend of Zelda: TOTK</h3>
+          <p class="juego-info">Plataforma: Switch</p>
+          <p class="juego-precio">$130.000</p>
+          <button class="btn btn-agregar">Agregar al carrito</button>
+        </article>
+
+        <article class="juego destacado" data-genero="aventura">
+          <span class="etiqueta etiqueta-nuevo">Nuevo</span>
+          <h3 class="juego-titulo">Hollow Knight: Silksong</h3>
+          <p class="juego-info">Plataforma: PC / Switch</p>
+          <p class="juego-precio">$70.000</p>
+          <button class="btn btn-agregar">Agregar al carrito</button>
+        </article>
+
+        <article class="juego oferta" data-genero="aventura">
+          <span class="etiqueta etiqueta-oferta">Oferta</span>
+          <h3 class="juego-titulo">Uncharted 4</h3>
+          <p class="juego-info">Plataforma: PS5</p>
+          <p class="juego-precio">$45.000</p>
+          <button class="btn btn-agregar">Agregar al carrito</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="categoria" id="categoria-estrategia">
+      <h2 class="titulo-categoria">Estrategia</h2>
+      <div class="lista-juegos">
+
+        <article class="juego" data-genero="estrategia">
+          <h3 class="juego-titulo">Age of Empires IV</h3>
+          <p class="juego-info">Plataforma: PC</p>
+          <p class="juego-precio">$90.000</p>
+          <button class="btn btn-agregar">Agregar al carrito</button>
+        </article>
+
+        <article class="juego oferta" data-genero="estrategia">
+          <span class="etiqueta etiqueta-oferta">Oferta</span>
+          <h3 class="juego-titulo">Civilization VI</h3>
+          <p class="juego-info">Plataforma: PC</p>
+          <p class="juego-precio">$55.000</p>
+          <button class="btn btn-agregar">Agregar al carrito</button>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="pie-pagina">
+    <p>Total de juegos en catálogo: <span id="contador-juegos">8</span></p>
+  </footer>
+
+  <script src="Js/index.js"></script>
+</body>
+</html>

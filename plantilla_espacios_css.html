@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de Espacios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1F2333;
+    --paper:#F6F4EE;
+    --panel:#FFFFFF;
+    --indigo:#2B3A67;
+    --indigo-light:#B9C2E0;
+    --amber:#F2A541;
+    --line:#E4E0D6;
+    --gray:#6B7280;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  body{
+    font-family: 'Inter', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  .font-display{ font-family: 'Space Grotesk', sans-serif; }
+
+  /* ---------- HEADER ---------- */
+  header{
+    width: 100%;
+    background: var(--indigo);
+  }
+
+  .header-inner{
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .user-block{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: var(--amber);
+    color: var(--indigo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .user-label{
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--indigo-light);
+  }
+
+  .user-name{
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  /* ---------- BOTONES DE ESPACIOS ---------- */
+  .space-toggles{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .space-btn{
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    border: none;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    background: transparent;
+    color: #E9E7DE;
+  }
+
+  .space-btn:hover{
+    background: rgba(255,255,255,0.08);
+  }
+
+  .space-btn.active{
+    background: #fff;
+    color: var(--indigo);
+    box-shadow: 0 2px 0 var(--amber);
+  }
+
+  .space-btn.active:hover{
+    background: #fff;
+  }
+
+  /* ---------- CONTENIDO CENTRAL ---------- */
+  main{
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  .main-title{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--indigo);
+    margin-bottom: 4px;
+  }
+
+  .main-subtitle{
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 24px;
+  }
+
+  .content-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 800px){
+    .content-grid{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .space-card{
+    border: 1px solid var(--line);
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .space-card.hidden{
+    display: none;
+  }
+
+  .card-header{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--amber);
+    display: inline-block;
+  }
+
+  .card-title{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--indigo);
+  }
+
+  .card-text{
+    font-size: 14px;
+    color: #4B5563;
+    line-height: 1.6;
+  }
+
+  .empty-state{
+    text-align: center;
+    font-size: 14px;
+    color: #9CA3AF;
+    margin-top: 40px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+
+      <!-- Usuario -->
+      <div class="user-block">
+        <div class="avatar" id="userInitial">N</div>
+        <div>
+          <p class="user-label">Sesión activa</p>
+          <p class="user-name font-display" id="userName">Nicolas</p>
+        </div>
+      </div>
+
+      <!-- Espacios seleccionables -->
+      <nav class="space-toggles" id="spaceToggles">
+        <button type="button" class="space-btn active" data-target="space-1">Espacio 1</button>
+        <button type="button" class="space-btn active" data-target="space-2">Espacio 2</button>
+        <button type="button" class="space-btn active" data-target="space-3">Espacio 3</button>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- CONTENIDO CENTRAL -->
+  <main>
+    <h1 class="main-title font-display">Panel de espacios</h1>
+    <p class="main-subtitle">Selecciona o quita espacios desde el header. El contenido de cada uno se muestra aquí.</p>
+
+    <div class="content-grid" id="contentGrid">
+
+      <section class="space-card" id="space-1">
+        <div class="card-header">
+          <span class="dot"></span>
+          <h2 class="card-title font-display">Espacio 1</h2>
+        </div>
+        <p class="card-text">
+          Aquí va el contenido del primer espacio. Puedes reemplazar este bloque con texto, una tabla,
+          una lista de tareas o cualquier componente que necesites.
+        </p>
+      </section>
+
+      <section class="space-card" id="space-2">
+        <div class="card-header">
+          <span class="dot"></span>
+          <h2 class="card-title font-display">Espacio 2</h2>
+        </div>
+        <p class="card-text">
+          Contenido del segundo espacio. Este bloque es independiente del anterior y se puede ocultar
+          desde el botón correspondiente en el header.
+        </p>
+      </section>
+
+      <section class="space-card" id="space-3">
+        <div class="card-header">
+          <span class="dot"></span>
+          <h2 class="card-title font-display">Espacio 3</h2>
+        </div>
+        <p class="card-text">
+          Contenido del tercer espacio. Los tres espacios pueden mostrarse u ocultarse de forma
+          independiente sin recargar la página.
+        </p>
+      </section>
+
+    </div>
+
+    <p class="empty-state" id="emptyState">No hay espacios seleccionados. Actívalos desde el header.</p>
+  </main>
+
+</body>
+</html>
