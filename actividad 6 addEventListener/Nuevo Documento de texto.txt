@@ -1,0 +1,5 @@
+https://developer.mozilla.org/es/docs/Web/API/Element/classList
+https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList
+https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle
+https://www.lenovo.com/co/es/glosario/toggle/?orgRef=https%253A%252F%252Fwww.google.com%252F&srsltid=AfmBOopgz6DgXwYZ0gE2u_4SiVuCkGoaFCZGN8sgYT2A4PNoElq-tpXQ
+https://www.geeksforgeeks.org/javascript/how-to-toggle-an-element-class-in-javascript/

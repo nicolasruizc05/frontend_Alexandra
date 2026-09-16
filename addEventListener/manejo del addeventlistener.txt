@@ -1,0 +1,8 @@
+addEventListener es un evento del dom esta funcion es tipo callback
+elemento.addEventListener("evento",funcion)
+funcion tipo flecha => elemento.addEventListener("evento",()=>{})
+boton.addEventListener("click",()=>{})
+boton.addEventListener("dblclick",()=>{})
+boton.addEventListener("mouseover",()=>{})
+event.preventdefault()=> manejo de recargas de html
+
