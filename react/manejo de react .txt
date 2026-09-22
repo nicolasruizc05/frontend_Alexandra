@@ -1,0 +1,28 @@
+verificar que node este instalado 
+
+node --version
+
+instalar 
+npm create vite@latest <nombreproyecto>
+select a framework 
+React
+seleccionar el lenguaje 
+
+javascript
+
+linter de uso
+eslint 
+
+instalar y correr el npm
+no
+
+
+
+mover a la carpeta 
+ cd ejemploInicio
+code .
+
+se necesita para la instalacion 
+  npm install
+  npm run dev
+  para detener el proceso ctr + c

@@ -1,0 +1,33 @@
+function Tabla(){
+    return(
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nicolas</td>
+                        <td>Ruiz</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <td>David</td>
+                        <td>Ruiz</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>Maria</td>
+                        <td>Gomez</td>
+                        <td>25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    )
+}
+export default Tabla

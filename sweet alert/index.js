@@ -8,8 +8,8 @@ boton.addEventListener("click", ()=>{
     });
 })
 let boton2 = document.querySelector("#boton2")
-boton2.addEventListener("click", ()=>{
-    let resultado=Swal.fire({
+boton2.addEventListener("click", async()=>{
+    let resultado= await Swal.fire({
         title:"Desea Eliminar",
         text:"Esta seguro que desea Elminar",
         icon:"error",
@@ -18,4 +18,9 @@ boton2.addEventListener("click", ()=>{
         cancelButtonText:"No, salir alerta"
     })
     console.log(resultado.isConfirmed)
+    if(resultado.isConfirmed == true){
+        alert("Registro eliminado correctamente")
+    }else{
+        alert("Registro no eliminado")
+    }
 })
